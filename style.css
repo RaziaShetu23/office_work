@@ -1,0 +1,839 @@
+/* ==========================================
+   BASIC RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e8f4eb 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #dceee2 0%,
+            transparent 35%
+        ),
+        #f5f8f5;
+
+    color: #24382c;
+
+    min-height: 100vh;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #153b29,
+            #24563b,
+            #377050
+        );
+
+    color: white;
+}
+
+
+/* Decorative Circle */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    top: -280px;
+
+    left: -150px;
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    bottom: -280px;
+
+    right: -150px;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   HERO BADGE
+========================================== */
+
+.hero-badge {
+
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   HERO TITLE
+========================================== */
+
+.hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 7vw, 85px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    font-weight: 700;
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: #d4e9bd;
+}
+
+
+/* ==========================================
+   HERO DESCRIPTION
+========================================== */
+
+.hero p {
+
+    max-width: 680px;
+
+    margin: auto;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.collection-section {
+
+    width: min(1250px, 92%);
+
+    margin: auto;
+
+    padding: 90px 0;
+}
+
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.section-label {
+
+    color: #4c8061;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 800;
+}
+
+
+.section-heading h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    color: #1c402b;
+
+    margin: 10px 0;
+}
+
+
+.section-heading p {
+
+    color: #718078;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   FLOWER CONTAINER
+========================================== */
+
+#flowerContainer {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 35px;
+}
+
+
+/* ==========================================
+   FLOWER CARD
+========================================== */
+
+.flower-card {
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    border: 1px solid #e1e9e3;
+
+    box-shadow:
+        0 15px 40px rgba(31, 65, 45, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation: cardAppear 0.7s ease both;
+}
+
+
+/* Card Hover */
+
+.flower-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 55px rgba(31, 65, 45, 0.17);
+}
+
+
+/* ==========================================
+   CARD ANIMATION
+========================================== */
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+}
+
+
+/* ==========================================
+   IMAGE AREA
+========================================== */
+
+.image-wrapper {
+
+    height: 350px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #dfe9e1;
+}
+
+
+/* ==========================================
+   FLOWER IMAGE
+========================================== */
+
+.flower-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: fill;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+/* Image Hover */
+
+.flower-card:hover .flower-image {
+
+    transform: scale(1.08);
+}
+
+
+/* Image Overlay */
+
+.image-wrapper::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 45%,
+            rgba(0, 0, 0, 0.35)
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   NUMBER BADGE
+========================================== */
+
+.image-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    z-index: 2;
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.93);
+
+    color: #28553b;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   SEASON BADGE
+========================================== */
+
+.season-badge {
+
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 18px;
+
+    z-index: 2;
+
+    padding: 9px 16px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.93);
+
+    color: #28553b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.flower-content {
+
+    padding: 30px;
+}
+
+
+/* ==========================================
+   FLOWER TITLE
+========================================== */
+
+.flower-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.flower-title h2 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #1e4931;
+
+    font-size: 35px;
+
+    line-height: 1.1;
+
+    margin-bottom: 6px;
+}
+
+
+/* Scientific Name */
+
+.scientific-name {
+
+    color: #829088;
+
+    font-size: 14px;
+
+    font-style: italic;
+}
+
+
+/* Flower Icon */
+
+.flower-symbol {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #edf5ed;
+
+    color: #3d7650;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #e6ece7;
+
+    margin: 22px 0;
+}
+
+
+/* ==========================================
+   LABEL
+========================================== */
+
+.info-label {
+
+    display: block;
+
+    color: #71907b;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.description-section {
+
+    margin-bottom: 25px;
+}
+
+
+.description {
+
+    color: #596961;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   INFORMATION GRID
+========================================== */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   INFORMATION BOX
+========================================== */
+
+.info-box {
+
+    padding: 17px;
+
+    border-radius: 15px;
+
+    background: #f4f8f4;
+
+    border: 1px solid #e3ebe4;
+}
+
+
+/* Bloom Season Full Width */
+
+.info-box.full-width {
+
+    grid-column: 1 / -1;
+}
+
+
+/* Information Value */
+
+.info-box strong {
+
+    display: block;
+
+    color: #31583e;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   COLORS SECTION
+========================================== */
+
+.colors-section {
+
+    padding-top: 5px;
+}
+
+
+/* Color List */
+
+.color-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+/* ==========================================
+   COLOR TAG
+========================================== */
+
+.color-tag {
+
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 50px;
+
+    background: #edf4ee;
+
+    border: 1px solid #dce8df;
+
+    color: #476752;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.color-tag:hover {
+
+    background: #dcecdf;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid #e1e8e2;
+
+    color: #728078;
+
+    font-size: 13px;
+
+    background: #ffffff;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    #flowerContainer {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .image-wrapper {
+
+        height: 380px;
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+
+        min-height: 400px;
+
+        padding: 50px 20px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 14px;
+
+    }
+
+
+    .collection-section {
+
+        width: 94%;
+
+        padding: 60px 0;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .flower-content {
+
+        padding: 22px;
+
+    }
+
+
+    .image-wrapper {
+
+        height: 280px;
+
+    }
+
+
+    .flower-title h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .info-box.full-width {
+
+        grid-column: auto;
+
+    }
+
+}
